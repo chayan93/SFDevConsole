@@ -8,8 +8,9 @@
   "content_scripts": [
     {
       "matches": [
-        "<all_urls>"
-      ],
+				"https://*.force.com/*",
+				"https://*.salesforce.com/*"
+			],
       "js": ["content.js"]
     }
   ],
