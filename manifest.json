@@ -1,20 +1,24 @@
 {
-  "manifest_version": 2,
-  "name": "Open Debug Log",
-  "version": "0.1",
-  "background": {
-    "scripts": ["background.js"]
-  },
-  "content_scripts": [
-    {
-      "matches": [
-				"https://*.force.com/*",
-				"https://*.salesforce.com/*"
-			],
-      "js": ["content.js"]
-    }
-  ],
-  "browser_action": {
-    "default_icon": "icon.png"
-  }
+    "manifest_version": 2,
+    "name": "Open Debug Log",
+    "version": "0.1",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "content_scripts": [{
+        "matches": [
+            "https://*.force.com/*",
+            "https://*.salesforce.com/*"
+        ],
+        "js": ["content.js"]
+    }],
+    "browser_action": {
+        "default_icon": "icon.png"
+    },
+	
+    "incognito": "split",
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ]
 }
